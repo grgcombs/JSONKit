@@ -53,6 +53,9 @@
  limitations under the License.
 */
 
+#ifndef JSONKit_h
+#define JSONKit_h "JSONKit.h"
+
 #include <stddef.h>
 #include <stdint.h>
 #include <limits.h>
@@ -246,4 +249,6 @@ typedef struct JKParseState JKParseState; // Opaque internal, private type.
 
 #ifdef __cplusplus
 }  // extern "C"
+#endif
+
 #endif
