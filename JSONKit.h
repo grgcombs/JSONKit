@@ -177,20 +177,20 @@ typedef struct JKParseState JKParseState; // Opaque internal, private type.
 ////////////
 
 @interface NSString (JSONKitDeserializing)
-@property (NS_NONATOMIC_IOSONLY, readonly, strong) id objectFromJSONString;
+- (id)objectFromJSONString;
 - (id)objectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags;
 - (id)objectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
-@property (NS_NONATOMIC_IOSONLY, readonly, strong) id mutableObjectFromJSONString;
+- (id)mutableObjectFromJSONString;
 - (id)mutableObjectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags;
 - (id)mutableObjectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
 @end
 
 @interface NSData (JSONKitDeserializing)
 // The NSData MUST be UTF8 encoded JSON.
-@property (NS_NONATOMIC_IOSONLY, readonly, strong) id objectFromJSONData;
+- (id)objectFromJSONData;
 - (id)objectFromJSONDataWithParseOptions:(JKParseOptionFlags)parseOptionFlags;
 - (id)objectFromJSONDataWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
-@property (NS_NONATOMIC_IOSONLY, readonly, strong) id mutableObjectFromJSONData;
+- (id)mutableObjectFromJSONData;
 - (id)mutableObjectFromJSONDataWithParseOptions:(JKParseOptionFlags)parseOptionFlags;
 - (id)mutableObjectFromJSONDataWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
 @end

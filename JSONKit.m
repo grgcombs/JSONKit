@@ -628,7 +628,8 @@ static NSNumberInitWithUnsignedLongLongImp _jk_NSNumberInitWithUnsignedLongLongI
 
 extern void jk_collectionClassLoadTimeInitialization(void) __attribute__ ((constructor));
 
-void jk_collectionClassLoadTimeInitialization(void) {
+void jk_collectionClassLoadTimeInitialization(void)
+{
     @autoreleasepool {
         _JKArrayClass             = objc_getClass("JKArray");
         _JKArrayInstanceSize      = jk_max(16UL, class_getInstanceSize(_JKArrayClass));
@@ -650,7 +651,8 @@ void jk_collectionClassLoadTimeInitialization(void) {
 
 
 #pragma mark -
-@interface JKArray : NSMutableArray <NSCopying, NSMutableCopying, NSFastEnumeration> {
+@interface JKArray : NSMutableArray <NSCopying, NSMutableCopying, NSFastEnumeration>
+{
   id *objects;
   NSUInteger  count, capacity, mutations;
 }
